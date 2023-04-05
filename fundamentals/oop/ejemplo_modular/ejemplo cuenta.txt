@@ -1,9 +1,10 @@
-class CuentaBanco:
+"""""
+class BankAccount:
     accounts = []
     def __init__(self,int_rate,balance):
         self.int_rate = int_rate
         self.balance = balance
-        CuentaBanco.accounts.append(self)
+        BankAccount.accounts.append(self)
 
     def deposit(self, amount):
         self.balance += amount
@@ -31,13 +32,23 @@ class CuentaBanco:
             account.display_account_info()
 
 
+
+
+
+
+
+
+
+
+
+
 class User:
 
     def __init__(self, name):
         self.name = name
         self.account = {
-            "checking" : CuentaBanco(.02,1000),
-            "savings" : CuentaBanco(.05,3000)
+            "checking" : BankAccount(.02,1000),
+            "savings" : BankAccount(.05,3000)
         }
         
 
@@ -58,3 +69,6 @@ adrien = User("Adrien")
 
 adrien.account['checking'].deposit(100)
 adrien.display_user_balance()
+
+
+"""

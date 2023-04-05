@@ -1,3 +1,4 @@
+
 class CuentaBancaria:
     accounts = []
     def __init__(self,int_rate,balance):
@@ -39,3 +40,9 @@ savings.deposit(10).deposit(20).deposit(40).withdraw(600).yeild_interest().displ
 checking.deposit(100).deposit(200).deposit(400).withdraw(60).yeild_interest().display_account_info()
 
 CuentaBancaria.print_all_accounts()
+
+
+class Usuario:
+    # otros métodos
+    def hacer_depósito(self, amount):
+    	self.balance_cuenta += amount	# hum... la clase de usuario ya no tiene un atributo balance_cuenta
